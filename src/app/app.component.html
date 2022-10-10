@@ -1,23 +1,28 @@
-<app-materialsidenavigation
+<!-- <app-materialsidenavigation
   ><router-outlet></router-outlet
-></app-materialsidenavigation>
-<!-- <mat-sidenav-container class="example-container" autosize>
-  <mat-sidenav #sidenav class="example-sidenav" mode="side">
+></app-materialsidenavigation> -->
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <button mat-icon-button>
+      <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
+    </button>
+    <span>Landing Nav Bar</span>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-sidenav-container>
+  <mat-sidenav #sidenav mode="side">
     <mat-nav-list>
-      <mat-list-item>
-        <button mat-icon-button (click)="isExpanded = !isExpanded">
-          <mat-icon *ngIf="!isExpanded">menu</mat-icon>
-          <mat-icon *ngIf="isExpanded">chevron_left</mat-icon>
-        </button>
-      </mat-list-item>
-      <mat-list-item>
-        <mat-icon mat-list-icon>home</mat-icon>
-        <p matLine *ngIf="isExpanded">Home</p>
-      </mat-list-item>
+      <a mat-list-item routerLink="home">Home</a>
+      <a mat-list-item routerLink="login">Login</a>
+      <a mat-list-item routerLink="forgot-password">Forgot Password</a>
+      <a mat-list-item routerLink="rooms">Rooms</a>
     </mat-nav-list>
   </mat-sidenav>
 
-  <div class="example-sidenav-content">
-    <router-outlet></router-outlet>
-  </div>
-</mat-sidenav-container> -->
+  <mat-sidenav-content>
+    <div style="height: 88vh">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

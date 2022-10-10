@@ -21,8 +21,11 @@ const routes: Routes = [
   },
   {
     //if the page not found then redirect to pagenotfound component
-    path: '**',
+    path: 'home',
     component: LandingPageComponent,
+  },{
+    path: '',
+    component: PageNotFoundComponent,
   },
   {
     //if no routes or path is provided, redirect to login
