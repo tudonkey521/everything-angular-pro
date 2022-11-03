@@ -1,0 +1,23 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <button mat-icon-button>
+      <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
+    </button>
+    <span>Landing Nav Bar</span>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-sidenav-container>
+  <mat-sidenav #sidenav mode="side">
+    <mat-nav-list>
+      <a mat-list-item routerLink="home">Home</a>
+      <a mat-list-item routerLink="login">Login</a>
+      <a mat-list-item routerLink="forgot-password">Forgot Password</a>
+      <a mat-list-item routerLink="rooms">Rooms</a>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <div style="height: 88vh"></div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

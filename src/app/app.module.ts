@@ -8,9 +8,9 @@ import {
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RoomsComponent } from './rooms/rooms.component';
-import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
-import { LoginComponent } from './login/login.component';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { ForgotPasswordComponent } from './pages/base-components/forgot-password/forgot-password.component';
+import { LoginComponent } from './pages/base-components/login/login.component';
+import { PageNotFoundComponent } from './pages/base-components/page-not-found/page-not-found.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -24,9 +24,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatNativeDateModule } from '@angular/material/core';
-import { MaterialsidenavigationComponent } from './ui-constants/materialsidenavigation/materialsidenavigation.component';
-import { LandingPageComponent } from './landing-page/landing-page.component';
-
+import { LandingPageComponent } from './ui-constants/landing-page/landing-page.component';
 
 @NgModule({
   declarations: [
@@ -35,9 +33,7 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
     LoginComponent,
     ForgotPasswordComponent,
     PageNotFoundComponent,
-    MaterialsidenavigationComponent,
     LandingPageComponent,
-    
   ],
   imports: [
     BrowserAnimationsModule,
